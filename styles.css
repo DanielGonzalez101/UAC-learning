@@ -2,12 +2,13 @@ body {
   background-image: url(imagenes/inicio\ de\ sesion/fondo.png); /* Fondo claro similar al de la imagen */
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Arial', sans-serif;
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card {
   border-radius: 20px; /* Bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 .card-title {
@@ -15,13 +16,41 @@ body {
   margin-bottom: 2rem;
 }
 
+#formulario {
+  height: 670px;
+  width: 512px;
+}
+
+#contrasena {
+  color: #909090;
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 10px;
+}
+
+#usuario {
+  color: #909090;
+  background-color: #d9d9d9;
+  border: none;
+  border-radius: 10px;
+}
+
 .btn-primary {
-  background: #f06292; /* Color rosa del botón */
+  background-image: url(imagenes/inicio\ de\ sesion/fondo_btn.png); /* Color rosa del botón */
+  width: 247px;
+  height: 55px;
+  justify-content: center;
   border: none; /* Sin borde */
   border-radius: 20px; /* Bordes redondeados */
-  padding: 10px 0; /* Padding superior e inferior */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn-primary:hover {
   background: #e91e63; /* Color rosa más oscuro para el hover */
+}
+
+.container {
+  margin-top: 100px;
 }
