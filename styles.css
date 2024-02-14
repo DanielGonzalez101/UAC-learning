@@ -1,0 +1,27 @@
+body {
+  background-image: url(imagenes/inicio\ de\ sesion/fondo.png); /* Fondo claro similar al de la imagen */
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+}
+
+.card {
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+.card-title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: #f06292; /* Color rosa del botón */
+  border: none; /* Sin borde */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 10px 0; /* Padding superior e inferior */
+}
+
+.btn-primary:hover {
+  background: #e91e63; /* Color rosa más oscuro para el hover */
+}
