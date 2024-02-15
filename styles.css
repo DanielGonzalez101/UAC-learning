@@ -6,6 +6,30 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+#archivo {
+  position: absolute;
+  top: 10px; /* Ajustar según sea necesario */
+  left: 10px; /* Ajustar según sea necesario */
+}
+
+#cuaderno {
+  position: absolute;
+  top: 10px; /* Ajustar según sea necesario */
+  right: 10px; /* Ajustar según sea necesario */
+}
+
+#computador {
+  position: absolute;
+  bottom: 10px; /* Ajustar según sea necesario */
+  right: 10px;
+}
+
+#universidad {
+  position: absolute;
+  bottom: 10px; /* Ajustar según sea necesario */
+  left: 10px;
+}
+
 .card {
   border-radius: 20px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -47,7 +71,7 @@ body {
 .btn-primary {
   background-image: url(imagenes/inicio\ de\ sesion/fondo_btn.png); /* Color rosa del botón */
   width: 247px;
-  height: 55px;
+  height: 50px;
   justify-content: center;
   border: none; /* Sin borde */
   border-radius: 30px; /* Bordes redondeados */
@@ -61,5 +85,6 @@ body {
 }
 
 .container {
+  position: relative;
   margin-top: 100px;
 }
