@@ -25,18 +25,23 @@
             <!-- Inputs -->
             <form>
               <div class="form-group">
-                <label for="usuario">Usuario</label>
+                <!-- lbl inputs son lo que estan arriba de los inputs de contraseña y usuario -->
+                <label for="usuario" class="lbl_inputs">Usuario</label>
                 <input type="text" class="form-control" id="usuario" placeholder="Usuario">
               </div>
               <div class="form-group">
-                <label for="contrasena">Contraseña</label>
+                <!-- lbl inputs son lo que estan arriba de los inputs de contraseña y usuario -->
+                <label for="contrasena" class="lbl_inputs">Contraseña</label>
                 <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
               </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="recordarme">
+              <div class="form-group form-check" id="recordarme">
+                <input type="checkbox" class="form-check-input">
                 <label class="form-check-label" for="recordarme">Recordarme</label>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">INICIAR SESION</button>
+              <div id="btn">
+                <button type="submit" class="btn btn-primary btn-block" id="boton">INICIAR SESION</button>
+                <button type="submit" class="btn btn-primary btn-block" id="boton">CREAR CUENTA</button>
+              </div>
             </form>
           </div>
         </div>
