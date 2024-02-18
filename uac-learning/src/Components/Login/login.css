@@ -1,0 +1,66 @@
+/* Estilos para el contenedor del formulario */
+body {
+  background-image: url('./Fondos/image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 512px;
+  height: 670px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Si tienes un título dentro de tu formulario */
+#title {
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.input-style {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#input-usuario {
+  background-color: #d9d9d9;
+  border-color: transparent;
+  border-radius: 15px; /* Bordes ligeramente redondeados */
+  padding: 10px;
+  margin: 8px 0; /* Espacio vertical entre los campos de entrada */
+  width: 480px;
+  height: 20px;
+  font-size: 20px;
+}
+
+#input-contrasena {
+  background-color: #d9d9d9;
+  border-color: transparent;
+  border-radius: 15px; /* Bordes ligeramente redondeados */
+  padding: 10px;
+  margin: 10px 0; /* Espacio vertical entre los campos de entrada */
+  margin-left: 10px;
+  width: 430px;
+  height: 20px;
+  font-size: 20px;
+}
+
+/* Estilos del botón, similar a lo que ya tienes */
+#button-style {
+  /* tus estilos aquí */
+}

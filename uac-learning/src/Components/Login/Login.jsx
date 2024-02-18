@@ -1,68 +1,70 @@
-import React, { useState } from 'react';
-import Icons from "../Icons/Icons"
+import React from "react";
+import './login.css'
 
-
-class Login extends React.Component {
+const Login = () => {
   // state and methods for handling login would go here
-
   // Css
-  render() {
-    const formStyle = {
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: '100vh' // for centering vertically in the viewport
-    };
+  return (
+    // Contenedor de toda la pagina
+    <div className="container">
 
-    const inputStyle = {
-      margin: '10px 0',
-      padding: '10px',
-      border: '1px solid #ccc',
-      borderRadius: '4px',
-      width: '200px' // or as required
-    };
+      {/* Inicia el formulario */}
+      <div id="form" >
 
-    const buttonStyle = {
-      margin: '10px 0',
-      padding: '10px 20px',
-      border: 'none',
-      borderRadius: '20px', // adjust as needed
-      backgroundColor: '#FFA07A', // the button color you want
-      color: 'white',
-      cursor: 'pointer'
-    };
-
-    return (
-      <div style={formStyle}>
-        <div style={{ margin: '20px' }}>
-          <h2>UAC Learning</h2>
+        {/* Titulo */}
+        <div id="title">
+          <div>
+            <h2>UAC Learning</h2>
+          </div>
         </div>
-        <input
-          style={inputStyle}
-          type="text"
-          placeholder="Usuario"
-          // onChange, value, etc.
-        />
-        <input
-          style={inputStyle}
-          type="password"
-          placeholder="Contraseña"
-          // onChange, value, etc.
-        />
-        <label>
+        {/* Acaba titulo */}
+
+
+        {/* Incian los input */}
+        <div className="input-style">
           <input
-            type="checkbox"
-            // checked, onChange, etc.
+            type="text"
+            placeholder="Usuario"
+            id="input-usuario"
+          // onChange, value, etc.
           />
-          recordarme
-        </label>
-        <button style={buttonStyle} type="submit">
+          <br />
+
+          <input
+            type="password"
+            placeholder="Contraseña"
+            id="input-contrasena"
+          // onChange, value, etc.
+          />
+          <br />
+          <label>
+            <input
+              type="checkbox"
+            // checked, onChange, etc.
+            /> recordarme
+          </label>
+        </div>
+        {/* Acaban los inputs */}
+
+
+        <br />
+        {/* Inicia recordarme */}
+        {/* Termina recordarme */}
+
+        <br />
+
+        {/* Inicia el boton */}
+        <button id="button-style" type="submit">
           INICIAR SESIÓN
         </button>
+        {/* termina el boto */}
+
       </div>
-    );
-  }
+      {/* termina el form */}
+    </div>
+    // Se acaba el contenedor de la pagina
+  );
+  // Nota: En tu código origina
 }
 
 export default Login;
