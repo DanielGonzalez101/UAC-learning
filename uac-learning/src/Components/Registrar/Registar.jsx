@@ -6,10 +6,13 @@ import archivo from './iconos/icono_archivo.png'
 import cuaderno from './iconos/cuaderno.png'
 import universidad from './iconos/universidad.png'
 import computador from './iconos/computador.png'
+
+// Se importa el useState de react y Axios para mandar la info
 import { useState } from "react"
 import Axios from 'axios'
 
 function Registrar() {
+
   const [Correo, setCorreo] = useState("")
   const [Contrasena, setContrasena] = useState("")
   const [ConfirmarContrasena, setConfirmarContrasena] = useState("")
@@ -17,17 +20,26 @@ function Registrar() {
   const [Codigo, setCodigo] = useState(0)
   const [Usuario, setUsuario] = useState("")
 
-  const add = () => {
-    Axios.post('http://localhost:4000/create', {
-      Correo: Correo,
-      Contrasena: Contrasena,
-      ConfirmarContrasena: ConfirmarContrasena,
-      Colegio: Colegio,
-      Codigo: Codigo,
-      Usuario: Usuario
-    })
-  }
+  const add = async () => {
+    try {
 
+      const response = await Axios.post('http://localhost:4000/create', {
+        Correo: Correo,
+        Contrasena: Contrasena,
+        ConfirmarContrasena: ConfirmarContrasena,
+        Colegio: Colegio,
+        Codigo: Codigo,
+        Usuario: Usuario
+      })
+
+      console.log('Usuario creado: ', response.data)
+
+    } catch (error) {
+
+      console.error('Error al crear el usuario: ', error)
+
+    }
+  }
 
   return (// Contenedor de toda la pagina
     <>
