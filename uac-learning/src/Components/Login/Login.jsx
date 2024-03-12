@@ -23,6 +23,33 @@ const Login = () => {
     })
   }
 
+  // Validaciones de el login
+  const validar = () => {
+    Axios.post('/login', {
+      profesor_email: profesor_email,
+      profesor_password: profesor_password,
+    })
+      .then(response => {
+        // Manejo de la respuesta exitosa
+        console.log('Respuesta exitosa:', response.data);
+        // Aquí puedes redirigir al usuario o manejar el login exitoso
+      })
+      .catch(error => {
+        // Manejo de errores
+        if (error.response) {
+          // El servidor respondió con un código de estado fuera del rango 2xx
+          console.log('Error en el login:', error.response.data.msg);
+          // Aquí puedes mostrar el mensaje de error en la UI
+        } else if (error.request) {
+          // La solicitud fue hecha pero no se recibió respuesta
+          console.log('Error en el servidor:', error.request);
+        } else {
+          // Algo más causó el error
+          console.log('Error:', error.message);
+        }
+      });
+  }
+
   return (
     // Contenedor de toda la pagina
     <>
@@ -86,7 +113,7 @@ const Login = () => {
           <br />
 
           {/* Inicia el boton */}
-          <button id="button-style" type="submit" onClick={add}>
+          <button id="button-style" type="submit" onClick={validar}>
             INICIAR SESIÓN
           </button>
           {/* termina el boto */}
