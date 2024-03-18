@@ -2,10 +2,10 @@ import React from 'react'
 import './registrar.css'
 
 // Iconos
-import archivo from './iconos/icono_archivo.png'
-import cuaderno from './iconos/cuaderno.png'
-import universidad from './iconos/universidad.png'
-import computador from './iconos/computador.png'
+import archivo from '../../resources/login-registrar/iconos/icono_archivo.png'
+import cuaderno from '../../resources/login-registrar/iconos/cuaderno.png'
+import universidad from '../../resources/login-registrar/iconos/universidad.png'
+import computador from '../../resources/login-registrar/iconos/computador.png'
 
 // Se importa el useState de react y Axios para mandar la info
 import { useState } from "react"

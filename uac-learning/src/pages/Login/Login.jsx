@@ -1,10 +1,10 @@
 import React from "react";
 import './login.css'
 // Iconos de las esquinas
-import archivo from './iconos/icono_archivo.png'
-import cuaderno from './iconos/cuaderno.png'
-import universidad from './iconos/universidad.png'
-import computador from './iconos/computador.png'
+import archivo from '../../resources/login-registrar/iconos/icono_archivo.png'
+import cuaderno from '../../resources/login-registrar/iconos/cuaderno.png'
+import universidad from '../../resources/login-registrar/iconos/universidad.png'
+import computador from '../../resources/login-registrar/iconos/computador.png'
 import { useState } from "react"
 import Axios from 'axios'
 
@@ -26,8 +26,8 @@ const Login = () => {
   // Validaciones de el login
   const validar = () => {
     Axios.post('/login', {
-      profesor_email: profesor_email,
-      profesor_password: profesor_password,
+      // profesor_email: profesor_email,
+      // profesor_password: profesor_password,
     })
       .then(response => {
         // Manejo de la respuesta exitosa
