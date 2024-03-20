@@ -9,6 +9,7 @@ const Inicio = () => {
   return (
     <>
       <img src={cohete} alt="" className="cohete" id="iconos" />
+      
       {/* Contenedor de texto */}
       <div id="contenedor-texto">
         <p id="texto" className="programa">
@@ -20,8 +21,14 @@ const Inicio = () => {
         </pre>
       </div>
       <div id="contenedor-botones">
-        <img src={btnProfesor} alt=""  id=""/>
-        <img src={btnEstudiante} alt=""  />
+
+        <button id="btn-profesor" className="botones">
+          <img src={btnProfesor} alt="" />
+        </button>
+
+        <button id="btn-estudiante" className="botones">
+          <img src={btnEstudiante} alt="" id="btn-estudiante" />
+        </button>
       </div>
     </>
   )

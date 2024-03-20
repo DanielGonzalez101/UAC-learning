@@ -1,4 +1,3 @@
-/* Estilos para el contenedor del formulario */
 body {
   background-image: url('../../resources/inicio/fondos/fondo.svg');
   background-repeat: no-repeat;
@@ -14,7 +13,7 @@ body {
 }
 
 .cohete:hover {
-  transform: translateX(10px) translateY(10px); /* Mueve la imagen 10px a la derecha y 10px hacia abajo */
+  transform: translateX(10px) translateY(10px); 
 }
 
 #texto {
@@ -23,18 +22,48 @@ body {
 }
 
 #texto.programa {
-  white-space: pre-wrap;       /* CSS3 */
-  white-space: -moz-pre-wrap;  /* Mozilla, desde 1999 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap; 
+  white-space: -moz-pre-wrap; 
+  white-space: -o-pre-wrap; 
+  word-wrap: break-word; 
 }
 
-#contenedor-texto{
-  color: #FFF42C;
+#contenedor-texto {
+  color: #fff42c;
   margin: 90px;
   padding: 0px;
 }
 
 #segundoParrafo {
   font-size: 17px;
+}
+
+#btn-profesor {
+  background-color: transparent;
+  border: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+#btn-estudiante {
+  background-color: transparent;
+  border: none;
+  border-radius: 0%;
+  overflow: hidden;
+  margin-left: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.botones {
+  margin: auto;
+}
+
+.botones:hover {
+  transform: translateX(10px) translateY(10px); 
+}
+
+#contenedor-botones {
+  display: inline-block;
+  position: absolute;
+  bottom: 130px;
+  left: 100px;
 }
