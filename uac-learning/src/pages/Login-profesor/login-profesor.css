@@ -1,0 +1,108 @@
+/* Estilos para el contenedor del formulario */
+body {
+  background-image: url('../../resources/login-registrar/Fondos/image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.icon {
+  position: absolute;
+}
+
+#arriba-izq {
+  top: 0;
+  left: 0;
+}
+
+#arriba-der {
+  top: 0;
+  right: 0;
+}
+
+#abajo-izq {
+  bottom: 0;
+  left: 0;
+}
+
+#abajo-der {
+  bottom: 0;
+  right: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  position: relative;
+  margin: auto;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 512px;
+  height: 670px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  position: relative;
+}
+
+/* Si tienes un título dentro de tu formulario */
+#title {
+  margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+#input-usuario,
+#input-contrasena {
+  background-color: #d9d9d9;
+  border-color: transparent;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 8px auto; /* Margen automático para centrar horizontalmente */
+  width: 480px; /* Asegúrate de que el contenedor padre es lo suficientemente ancho para acomodar esto */
+  height: 45px;
+  font-size: 20px;
+  box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del ancho */
+}
+
+.lbl-inputs {
+  font-size: 25px;
+  margin: auto;
+}
+
+#input-contrasena {
+  /* Elimina el margen izquierdo explícito para mantener la consistencia */
+  margin: 10px auto; /* Margen automático para centrar horizontalmente */
+  width: 480px; /* Asegúrate de que el ancho es el mismo para ambos si quieres que estén alineados */
+}
+
+/* Estilos del botón, similar a lo que ya tienes */
+#button-style {
+  /* tus estilos aquí */
+  background-image: url(../../resources/login-registrar/Fondos/fondo-btn.png);
+  border-color: transparent;
+  justify-content: center;
+  border: none;
+  border-radius: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 247px;
+  height: 50px;
+  color: white;
+  font-size: 16px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Agregado para la transición */
+}
+#button-style:hover {
+  background-color: #3498db; /* Cambia este color al deseado */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Añade una sombra para un efecto de "elevación" */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+}

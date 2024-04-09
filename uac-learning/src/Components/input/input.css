@@ -1,0 +1,16 @@
+#input-usuario {
+  background-color: #d9d9d9;
+  border-color: transparent;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 8px auto; /* Margen automático para centrar horizontalmente */
+  width: 480px; /* Asegúrate de que el contenedor padre es lo suficientemente ancho para acomodar esto */
+  height: 45px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.lbl-input {
+  font-size: 25px;
+  margin: auto;
+}

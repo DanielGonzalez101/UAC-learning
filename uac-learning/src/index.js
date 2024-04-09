@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Login from './Components/Login/Login'
+// import LoginProfesor from './pages/Login/Login-profesor'
+import Inicio from './pages/inicio/Inicio'
+import RegistrarProfesor from './pages/Registrar-profesor/Registar-profesor'
 // Lo uso para importar la fuente a el proyecto porfavor no lo borren
 import './index.css'; // O el nombre de tu archivo CSS principal
 
@@ -8,6 +10,9 @@ import './index.css'; // O el nombre de tu archivo CSS principal
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Login/>
+    <RegistrarProfesor/>
+    {/* <Inicio/> */}
+    {/* <Login/> */}
+
   </React.StrictMode>
 );
