@@ -1,8 +1,9 @@
 import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
-import routeUser from './routes/usuario.js'
+import routeProfesor from './routes/profesor.js'
 import  env  from "./config.js"
+import { sequelize } from './database/db.js'
 // app init
 const app = express()
 
@@ -15,7 +16,11 @@ app.use(morgan('dev'))
 app.use(cors())
 
 // Routes
-app.use('/api', routeUser)
+app.use('/api', routeProfesor)
+
+sequelize.sync().then(() => {
+  console.log('Todas las tablas creadas');
+});
 
 // Route Not Found
 app.use((req, res) => {

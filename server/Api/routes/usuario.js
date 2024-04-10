@@ -3,7 +3,7 @@ import { Usuario } from "../models/Usuario.js";
 
 const route = Router()
 
-route.post("/create", async (req, res) => {
+route.post("/registrar", async (req, res) => {
     try {
         //console.log(req.body)
         const newUser = req.body
