@@ -7,22 +7,22 @@ route.post('/registrar', async (req, res) => {
   try {
     const nuevoProfesor = req.body
 
-    // const profesorRegistrar = await Profesor.findOne({
-    //   where: {
-    //     profesor_correo: nuevoProfesor.Correo,
-    //   },
-    // })
+    const profesorRegistrar = await Profesor.findOne({
+      where: {
+        profesor_correo: nuevoProfesor.Correo,
+      },
+    })
 
-    // const verificarCedula = await Profesor.findOne({
-    //   where: {
-    //     profesor_cedula: nuevoProfesor.Cedula,
-    //   },
-    // })
+    const verificarCedula = await Profesor.findOne({
+      where: {
+        profesor_cedula: nuevoProfesor.Correo,
+      },
+    })
 
-    // if (profesorRegistrar)
-    //   return res.status(400).json({ msg: 'Error el correo esta ya registrado' })
-    // if (verificarCedula)
-    //   return res.status(400).json({ msg: 'Error la cedula ya esta registrada' })
+    if (profesorRegistrar)
+      return res.status(400).json({ msg: 'Error el correo esta ya registrado' })
+    if (verificarCedula)
+      return res.status(400).json({ msg: 'Error la cedula ya esta registrada' })
 
     await Profesor.create({
       profesor_nombre: nuevoProfesor.Nombre,
