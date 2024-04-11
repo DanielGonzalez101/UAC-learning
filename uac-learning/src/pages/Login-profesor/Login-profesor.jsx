@@ -1,30 +1,21 @@
 import React from "react";
 import './login-profesor.css'
+import { useContext } from "react"
+import Contexto from "../../Context/context"
+import {Link} from "react-router-dom"
 // Iconos de las esquinas
 import archivo from '../../resources/login-registrar/iconos/icono_archivo.png'
 import cuaderno from '../../resources/login-registrar/iconos/cuaderno.png'
 import universidad from '../../resources/login-registrar/iconos/universidad.png'
 import computador from '../../resources/login-registrar/iconos/computador.png'
 import { useState } from "react"
-import Axios from 'axios'
 import Input from '../../Components/input/Input'
 
 
 const LoginProfesor = () => {
+  const {logearme} = useContext(Contexto)
   const [Usuario, setUsuario] = useState("")
   const [Contrasena, setContrasena] = useState("")
-
-  // Hacemos un metodo add para poder agregar axios (editar)
-  const add = () => {
-    Axios.post('http://localhost:3001/create', {
-      Usuario: Usuario,
-      Contrasena: Contrasena
-    }).then(() => {
-      alert('Usuario Registrado')
-    })
-  }
-
-
   return (
     // Contenedor de toda la pagina
     <>
@@ -69,11 +60,12 @@ const LoginProfesor = () => {
           <br />
 
           {/* Inicia el boton */}
-          <button id="button-style" type="submit" onClick={add}>
+          <button id="button-style" type="submit" onClick={logearme(Usuario,Contrasena)}>
             INICIAR SESIÓN
           </button>
           {/* termina el boto */}
-
+          {/* Personalizar a mi me da flojera */}
+          <Link to="/registro"><button>Click si no te encuentras registrado</button></Link>
         </div>
         {/* termina el form */}
       </div>
