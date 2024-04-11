@@ -15,7 +15,7 @@ route.post('/registrar', async (req, res) => {
 
     const verificarCedula = await Profesor.findOne({
       where: {
-        profesor_cedula: nuevoProfesor.Correo,
+        profesor_cedula: nuevoProfesor.Cedula,
       },
     })
 
@@ -40,6 +40,24 @@ route.post('/registrar', async (req, res) => {
     console.log(error)
     return res.status(500)
   }
+})
+
+route.post('/login', async (req,res) => {
+  const {usuario,contraseña} = req.body
+   try {
+    const profesorencontrado = await Profesor.findOne({
+      where: {
+        profesor_correo: usuario,
+      },
+    })
+    
+    if (profesorencontrado) {
+      if(contraseña === profesorencontrado.profesor_contrasena) return res.sendStatus(200)
+    }
+    return res.sendStatus(400)
+   } catch (error) {
+    return res.sendStatus(500)
+   }
 })
 
 export default route
