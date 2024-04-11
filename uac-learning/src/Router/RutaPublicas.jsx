@@ -4,6 +4,7 @@ import RutaPrivadas from './RutaPrivadas'
 import { useContext } from 'react'
 import Contexto from '../Context/context'
 import Registrar from '../pages/Registrar-profesor/Registar-profesor'
+import Inicio from '../pages/inicio/Inicio'
 
 function RutaPublicas() {
   const {estado} = useContext(Contexto)
@@ -11,10 +12,13 @@ function RutaPublicas() {
     <>
     <Routes>
         <Route path='login'  
-        element= {!estado? <Login/> : <Navigate to="/inicio"/>}
+        element= {!estado? <Login/> : <Navigate to="/"/>}
         />
         <Route path='registro'  
-        element= {!estado? <Registrar/> : <Navigate to="/inicio"/>}
+        element= {!estado? <Registrar/> : <Navigate to="/"/>}
+        />
+        <Route path='inicio'  
+        element= {!estado? <Inicio/> : <Navigate to="/"/>}
         />
         <Route path='/*' 
         element={estado? <RutaPrivadas/>:<Navigate to="/login"/>}

@@ -13,6 +13,7 @@ import Axios from 'axios'
 
 // Import input 
 import Input from '../../Components/input/Input'
+import { Link } from 'react-router-dom'
 
 function RegistrarProfesor() {
 
@@ -26,7 +27,7 @@ function RegistrarProfesor() {
   const add = async () => {
     try {
 
-      const response = await Axios.post('http://localhost:3001/api/registrar', {
+      const response = await Axios.post('http://localhost:3100/api/registrar', {
         Nombre: Nombre,
         Apellido: Apellido,
         Contrasena: Contrasena,
@@ -35,8 +36,7 @@ function RegistrarProfesor() {
         Cedula: Cedula 
       })
 
-      console.log('Usuario creado: ', response.data)
-
+      alert(response.data.msg)
     } catch (error) {
 
       console.error('Error al crear el usuario: ', error)
@@ -103,9 +103,12 @@ function RegistrarProfesor() {
             Crear Cuenta
           </button>
           {/* termina el boto */}
-
+          {/* Personalizar a mi me da flojera */}
+          <Link to="/login"><button>Click si ya tienes cuenta</button></Link> 
         </div>
         {/* termina el form */}
+                  
+
       </div>
       {/* // Se acaba el contenedor de la pagina */}
     </>)

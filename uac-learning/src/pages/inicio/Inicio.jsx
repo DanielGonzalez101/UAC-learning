@@ -4,6 +4,7 @@ import './inicio.css'
 import cohete from '../../resources/inicio/icons/cohete.svg'
 import btnProfesor from '../../resources/inicio/icons/btn-profesor.svg'
 import btnEstudiante from '../../resources/inicio/icons/btn-estudiante.svg'
+import { Link } from "react-router-dom";
 
 const Inicio = () => {
   return (
@@ -28,14 +29,16 @@ const Inicio = () => {
 
       {/* Abre contendor para los botones */}
       <div id="contenedor-botones">
-
-        <button id="btn-profesor" className="botones">
-          <img src={btnProfesor} alt="" />
-        </button>
-
-        <button id="btn-estudiante" className="botones">
-          <img src={btnEstudiante} alt="" id="btn-estudiante" />
-        </button>
+        <Link to="/login">
+          <button id="btn-profesor" className="botones">
+            <img src={btnProfesor} alt="" />
+          </button>
+        </Link>
+        <Link to="/login">
+          <button id="btn-estudiante" className="botones">
+            <img src={btnEstudiante} alt="" id="btn-estudiante" />
+          </button>
+        </Link>
 
       </div>
       {/* Cierra contenedor de botones */}
