@@ -15,11 +15,14 @@ const Login = () => {
 
   // Hacemos un metodo add para poder agregar axios
   const add = () => {
-    Axios.post('http://localhost:3001/create', {
+    Axios.post('http://localhost:4000/api/create', {
       Usuario: Usuario,
       Contrasena: Contrasena
-    }).then(() => {
+    }).then((res) => {
       alert('Usuario Registrado')
+      console.log(res)
+    }).catch(err => {
+      console.log(err)
     })
   }
 
