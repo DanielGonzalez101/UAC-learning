@@ -11,13 +11,13 @@ const init = () => {
     }
 }
 function Provider({children}) {
-    const logearme = (usuario,contraseña) => {
-        const logeado =  validarLogin(usuario,contraseña)
-        if (logeado) {
-            dispatch({type:types.login,user:usuario})
-        }
-        else {
-            alert("No se encuentra registrado")
+    const logearme = async (usuario,contraseña) => {
+        const {res,data} = await validarLogin(usuario,contraseña)
+        if (res) {
+            localStorage.setItem('estado',data)
+            dispatch({type:types.login,user:data})
+        } else {
+           alert(data)
         }
     }
     const deslogearme = () => {

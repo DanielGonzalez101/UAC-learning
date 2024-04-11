@@ -41,7 +41,7 @@ const LoginProfesor = () => {
           <div className="input-style">
             <Input placeholderText="Usuario" labelText="Usuario:" inputType="text" variable={Usuario} setVariable={setUsuario} />
             <br />
-            <Input placeholderText="Usuario" labelText="Usuario:" inputType="text" variable={Contrasena} setVariable={setContrasena} />
+            <Input placeholderText="Contraseña" labelText="Contraseña:" inputType="text" variable={Contrasena} setVariable={setContrasena} />
             <br />
             <label>
               <input
@@ -60,7 +60,7 @@ const LoginProfesor = () => {
           <br />
 
           {/* Inicia el boton */}
-          <button id="button-style" type="submit" onClick={logearme(Usuario,Contrasena)}>
+          <button id="button-style" type="submit" onClick={() => logearme(Usuario,Contrasena)}>
             INICIAR SESIÓN
           </button>
           {/* termina el boto */}

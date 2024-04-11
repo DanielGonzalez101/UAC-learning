@@ -1,15 +1,20 @@
 import Axios from 'axios'
 
 
-export const validarLogin = async (usuario,contraseña) => {
-    Axios.post('http://localhost:3001/create', {
-      Usuario: usuario,
-      Contrasena: contraseña
-    }).then(() => {
-        localStorage.setItem("estado",usuario)
-        return true
-    }).catch((err) => {
-        console.log(err)
-        return false
-    })
+export const validarLogin = async (usuario, contraseña) => {
+    try {
+        await Axios.post('http://localhost:3100/api/login', {
+            usuario: usuario,
+            contrasena: contraseña
+        });
+        return {
+            res:true,
+            data:usuario
+        }
+    } catch (error) {
+        return {
+            res:false,
+            data:error.message,
+        }
+    }
 }
