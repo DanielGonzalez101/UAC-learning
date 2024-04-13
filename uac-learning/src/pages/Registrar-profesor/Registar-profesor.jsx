@@ -21,7 +21,7 @@ function RegistrarProfesor() {
   const [Apellido, setApellido] = useState("")
   const [Contrasena, setContrasena] = useState("")
   const [Correo, setCorreo] = useState("")
-  const [Codigo, setCodigo] = useState(0)
+  const [Codigo, setCodigo] = useState()
   const [Cedula, setCedula] = useState("")
 
   const add = async () => {
@@ -33,7 +33,7 @@ function RegistrarProfesor() {
         Contrasena: Contrasena,
         Correo: Correo,
         Codigo: Codigo,
-        Cedula: Cedula 
+        Cedula: Cedula
       })
 
       alert(response.data.msg)
@@ -70,44 +70,44 @@ function RegistrarProfesor() {
             <Input placeholderText="Nombre" labelText="Nombre:" inputType="text" variable={Nombre} setVariable={setNombre} />
             <br />
 
-            <Input placeholderText="Apellido" labelText="Usuario:" inputType="text" variable={Apellido} setVariable={setApellido} />
+            <Input placeholderText="Apellido" labelText="Apellido:" inputType="text" variable={Apellido} setVariable={setApellido} />
             <br />
 
             <Input placeholderText="Correo" labelText="Correo:" inputType="text" variable={Correo} setVariable={setCorreo} />
             <br />
 
-            <Input placeholderText="Contraseña" labelText="Contraseña:" inputType="text" variable={Contrasena} setVariable={setContrasena} />
+            <Input placeholderText="Contraseña" labelText="Contraseña:" inputType="password" variable={Contrasena} setVariable={setContrasena} />
+            <br />
+            {/* Corregir el confirmar contraseña */}
+            {/* 
+            <Input placeholderText="Confirmar contraseña" labelText="Confirmar contraseña:" inputType="password" />
+            <br />
+ */}
+            <Input placeholderText="Codigo" labelText="Codigo:" inputType="number" variable={Codigo} setVariable={setCodigo} />
             <br />
 
-            <Input placeholderText="Codigo" labelText="Codigo:" inputType="text" variable={Codigo} setVariable={setCodigo} />
-            <br />
-
-            <Input placeholderText="Cedula" labelText="Usuario:" inputType="text" variable={Cedula} setVariable={setCedula} />
+            <Input placeholderText="Cedula" labelText="Cedula:" inputType="number" variable={Cedula} setVariable={setCedula} />
             <br />
             {/* Acaban los inputs */}
 
             {/* Inicia recordarme */}
             <br />
-            <label>
-              <input
-                type="checkbox"
-              // checked, onChange, etc.
-              /> Recordarme
-            </label>
+
             {/* Termina recordarme */}
           </div>
           <br />
 
           {/* Inicia el boton */}
-          <button id="button-register" type="submit" onClick={add}>
-            Crear Cuenta
-          </button>
+          <Link to="/login" id='button-registrar'>
+            <button id="button-register" type="submit" onClick={add}>
+              Crear Cuenta
+            </button>
+          </Link>
           {/* termina el boto */}
           {/* Personalizar a mi me da flojera */}
-          <Link to="/login"><button>Click si ya tienes cuenta</button></Link> 
         </div>
         {/* termina el form */}
-                  
+
 
       </div>
       {/* // Se acaba el contenedor de la pagina */}

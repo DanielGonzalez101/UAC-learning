@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
+  padding-top: 20px;
   position: relative;
   margin: auto;
 }
@@ -46,7 +46,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 512px;
-  height: 750px;
+  height: 950px;
   box-sizing: border-box;
   border-radius: 20px;
   background-color: white;
@@ -56,34 +56,7 @@ body {
 
 /* Si tienes un título dentro de tu formulario */
 #title {
-  margin-bottom: 20px; /* Espacio debajo del título */
-}
-
-#input-usuario,
-#input-contrasena,
-#input-correo,
-#input-codigo,
-#input-colegio {
-  background-color: #d9d9d9;
-  border-color: transparent;
-  border-radius: 15px;
-  padding: 10px;
-  margin: 8px auto; /* Margen automático para centrar horizontalmente */
-  width: 480px; /* Asegúrate de que el contenedor padre es lo suficientemente ancho para acomodar esto */
-  height: 45px;
-  font-size: 20px;
-  box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del ancho */
-}
-
-.lbl-inputs {
-  font-size: 25px;
-  margin: auto;
-}
-
-#input-contrasena {
-  /* Elimina el margen izquierdo explícito para mantener la consistencia */
-  margin: 10px auto; /* Margen automático para centrar horizontalmente */
-  width: 480px; /* Asegúrate de que el ancho es el mismo para ambos si quieres que estén alineados */
+  margin-bottom: 10px; /* Espacio debajo del título */
 }
 
 /* Estilos del botón, similar a lo que ya tienes */
@@ -96,16 +69,22 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 247px;
-  height: 70px;
+  margin-top: 15px;
+  width: 210px;
+  height: 60px;
   padding: 10px 20px;
   margin: 4px 10px; /* Margen exterior */
   color: white;
   font-size: 16px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Agregado para la transición */
 }
-#button-style:hover {
+
+#button-register:hover {
   background-color: #3498db; /* Cambia este color al deseado */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra para un efecto de "elevación" */
   cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+}
+
+#button-registrar {
+  margin-bottom: 20px;
 }
