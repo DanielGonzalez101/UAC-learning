@@ -2,7 +2,7 @@ import React from "react";
 import './login-profesor.css'
 import { useContext } from "react"
 import Contexto from "../../Context/context"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 // Iconos de las esquinas
 import archivo from '../../resources/login-registrar/iconos/icono_archivo.png'
 import cuaderno from '../../resources/login-registrar/iconos/cuaderno.png'
@@ -13,7 +13,7 @@ import Input from '../../Components/input/Input'
 
 
 const LoginProfesor = () => {
-  const {logearme} = useContext(Contexto)
+  const { logearme } = useContext(Contexto)
   const [Usuario, setUsuario] = useState("")
   const [Contrasena, setContrasena] = useState("")
   return (
@@ -26,7 +26,7 @@ const LoginProfesor = () => {
       <div className="container">
 
         {/* Inicia el formulario */}
-        <div id="form" >
+        <div id="form-registrar" >
 
           {/* Titulo */}
           <div id="title">
@@ -42,6 +42,10 @@ const LoginProfesor = () => {
             <Input placeholderText="Usuario" labelText="Usuario:" inputType="text" variable={Usuario} setVariable={setUsuario} />
             <br />
             <Input placeholderText="Contraseña" labelText="Contraseña:" inputType="text" variable={Contrasena} setVariable={setContrasena} />
+            <br />
+            <Link to="/registro">
+              <p>Click si no te encuentras registrado</p>
+            </Link>
             <br />
             <label>
               <input
@@ -60,12 +64,11 @@ const LoginProfesor = () => {
           <br />
 
           {/* Inicia el boton */}
-          <button id="button-style" type="submit" onClick={() => logearme(Usuario,Contrasena)}>
+          <button id="button-style" type="submit" onClick={() => logearme(Usuario, Contrasena)}>
             INICIAR SESIÓN
           </button>
           {/* termina el boto */}
           {/* Personalizar a mi me da flojera */}
-          <Link to="/registro"><button>Click si no te encuentras registrado</button></Link>
         </div>
         {/* termina el form */}
       </div>

@@ -7,25 +7,30 @@ body {
 }
 
 .icon {
-  position: absolute;
+  position: fixed;
+  /* Asegúrate de que el ícono tenga un tamaño adecuado, por ejemplo: */
 }
 
 #arriba-izq {
+  position: fixed;
   top: 0;
   left: 0;
 }
 
 #arriba-der {
+  position: fixed;
   top: 0;
   right: 0;
 }
 
 #abajo-izq {
+  position: fixed;
   bottom: 0;
   left: 0;
 }
 
 #abajo-der {
+  position: fixed;
   bottom: 0;
   right: 0;
 }
@@ -35,24 +40,31 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 150px;
   position: relative;
   margin: auto;
 }
 
-#form {
+#form-registrar {
+  position: fixed;
+  top: 50%; /* Centra verticalmente el formulario */
+  left: 50%; /* Centra horizontalmente el formulario */
+  transform: translate(-50%, -50%); /* Ajusta la posición exacta del centro */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 512px;
-  height: 670px;
+  width: 80vw; /* Proporción del ancho de la pantalla */
+  max-width: 512px; /* Ancho máximo */
+  height: auto; /* Altura basada en el contenido */
+  min-height: 50vh; /* Mínimo de la altura de la pantalla */
+  max-height: 670px; /* Altura máxima */
   box-sizing: border-box;
   border-radius: 20px;
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Espaciado interno */
 }
+
 
 /* Si tienes un título dentro de tu formulario */
 #title {
@@ -66,8 +78,8 @@ body {
   border-radius: 15px;
   padding: 10px;
   margin: 8px auto; /* Margen automático para centrar horizontalmente */
-  width: 480px; /* Asegúrate de que el contenedor padre es lo suficientemente ancho para acomodar esto */
-  height: 45px;
+  width: 100%; /* Cambiado a 100% para que se ajuste al ancho del contenedor padre */
+  max-width: 480px; /* Establece un ancho máximo */
   font-size: 20px;
   box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del ancho */
 }
@@ -80,7 +92,8 @@ body {
 #input-contrasena {
   /* Elimina el margen izquierdo explícito para mantener la consistencia */
   margin: 10px auto; /* Margen automático para centrar horizontalmente */
-  width: 480px; /* Asegúrate de que el ancho es el mismo para ambos si quieres que estén alineados */
+  width: 100%; /* Cambiado a 100% para que se ajuste al ancho del contenedor padre */
+  max-width: 480px; /* Establece un ancho máximo */
 }
 
 /* Estilos del botón, similar a lo que ya tienes */
@@ -94,15 +107,30 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 247px;
+  width: 100%; /* Cambiado a 100% para que se ajuste al ancho del contenedor padre */
+  max-width: 247px; /* Establece un ancho máximo */
   height: 50px;
   color: white;
   font-size: 16px;
   margin-top: 30px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Agregado para la transición */
 }
+
 #button-style:hover {
   background-color: #3498db; /* Cambia este color al deseado */
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Añade una sombra para un efecto de "elevación" */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra para un efecto de "elevación" */
   cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+}
+@media screen and (max-width: 768px) {
+  #form {
+    width: 90vw; /* Mayor proporción del ancho en pantallas pequeñas */
+    padding: 1rem; /* Menos espaciado interno en pantallas pequeñas */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #form {
+    width: 95vw; /* Mayor proporción del ancho en pantallas muy pequeñas */
+    padding: 1rem; /* Menos espaciado interno en pantallas muy pequeñas */
+  }
 }
