@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f7f7;
+  }
+  
+  .search-container {
+   
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 700px;
+      border-radius: 50px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden; /* Oculta los elementos hijos que sobrepasan el borde redondeado */
+      margin-top: -180px; /* Mueve la barra de búsqueda 180px hacia arriba */
+      margin-left: -340px; /* Mueve la barra de búsqueda 340px hacia la izquierda */
+      
+    }
+   
+  .input-with-icon {
+    display: flex;
+    align-items: center;
+    background: white; /* Fondo blanco para el input y el icono */
+    border-radius: 50px; /* Bordes redondeados */
+    width: 100%;
+  }
+  
+  input {
+    flex-grow: 1; /* Permite que el input crezca y llene el espacio */
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+  }
+  
+  .search-icon {
+    padding: 10px;
+    color: #333;
+    background-color: #ffffff; /* Fondo del ícono de la lupa */
+    border-radius: 50%; /* Redondea el fondo del ícono */
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Estilo opcional para cambiar la apariencia del input al enfocarse */
+  input:focus {
+    background-color: #e8e8e8;
+  }
+  
