@@ -7,14 +7,14 @@ const init = () => {
     const valor = localStorage.getItem("estado") //valor es el correo que se guardara en local storage
     return {
         estado: !!valor, 
-        usuario:valor
+        usuario:JSON.parse(valor)
     }
 }
 function Provider({children}) {
     const logearme = async (usuario,contraseña) => {
         const {res,data} = await validarLogin(usuario,contraseña)
         if (res) {
-            localStorage.setItem('estado',data)
+            localStorage.setItem('estado',JSON.stringify(data))
             dispatch({type:types.login,user:data})
         } else {
            alert(data)

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './EditUser.css'; // Importa el archivo CSS si lo tienes
-
+import userIcon from '../../resources/editar-usuario/icono-usuario.png'
 function EditUser() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -26,11 +26,11 @@ function EditUser() {
       <div className="column">  
       <div className="section top-section">
           <h3>Detalles del Usuario</h3>
-          <img src="" alt="Imagen de usuario" />
+          <img src={userIcon} className = "img-edituser" alt="Imagen de usuario" />
           <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name">Nombre:</label>
-              <input
+              <input className='input-edituser'
                 id="name"
                 type="text"
                 value={name}
@@ -39,14 +39,14 @@ function EditUser() {
             </div>
             <div>
               <label htmlFor="email">Correo electrónico:</label>
-              <input
+              <input className='input-edituser'
                 id="email"
                 type="email"
                 value={email}
                 onChange={handleEmailChange}
               />
             </div>
-            <button type="submit">Guardar</button>
+            <button className='button-edituser' type="submit">Guardar</button>
           </form>
         </div>
 

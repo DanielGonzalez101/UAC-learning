@@ -1,0 +1,18 @@
+
+
+.accordion-header {
+    cursor: pointer;
+}
+
+.accordion-content {
+    color: black;
+}
+.button {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin: 0px;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}

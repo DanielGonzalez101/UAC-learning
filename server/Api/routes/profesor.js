@@ -43,7 +43,7 @@ route.post('/registrar', async (req, res) => {
 })
 
 route.post('/login', async (req,res) => {
-  const {usuario,contraseña} = req.body
+  const {usuario,contrasena} = req.body
    try {
     const profesorencontrado = await Profesor.findOne({
       where: {
@@ -52,7 +52,9 @@ route.post('/login', async (req,res) => {
     })
     
     if (profesorencontrado) {
-      if(contraseña === profesorencontrado.profesor_contrasena) return res.sendStatus(200)
+      if(contrasena === profesorencontrado.profesor_contraseña) return res.json({
+        info: profesorencontrado
+      })
     }
     return res.sendStatus(400)
    } catch (error) {

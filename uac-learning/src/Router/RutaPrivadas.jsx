@@ -1,15 +1,16 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
-import Home from '../pages/pagina-principal/Home'
+import Curso from '../pages/Cursos/Curso'
+import EditUser from '../pages/Editar-Usuario/EditUser'
 
 function RutaPrivadas() {
   return (
     <>
         {/*<NavBar/> Hagan el navbar perros*/ }
         <Routes>
-            <Route path='principal' element={<Home/>}/>
-            {/*<Route path='editar-usuario'element={<editar-usuario/>}/> Hazlo aqui cuña*/}
-            <Route path='/' element={<Navigate to="principal"/>}/>
+            <Route path='cursos' element={<Curso/>}/>
+            <Route path='perfil' element={<EditUser/>}/>
+            <Route path='/*' element={<Navigate to="/cursos"/>}/>
         </Routes>
     </>
   )

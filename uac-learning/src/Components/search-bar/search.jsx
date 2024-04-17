@@ -1,5 +1,5 @@
 
-import './registrar-profesor.css'
+import './search.css'
 import React, { useState } from 'react';
   // Asegúrate de tener este archivo en tu proyecto
 
@@ -13,7 +13,7 @@ function SearchBar() {
     return (
         <div className="search-container">
             <div className="input-with-icon">
-                <input
+                <input className='input-search'
                     type="text"
                     placeholder="Buscar..."
                     value={input}

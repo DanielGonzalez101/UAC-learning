@@ -21,7 +21,7 @@ function RutaPublicas() {
         element= {!estado? <Inicio/> : <Navigate to="/"/>}
         />
         <Route path='/*' 
-        element={estado? <RutaPrivadas/>:<Navigate to="/login"/>}
+        element={estado? <RutaPrivadas/>:<Navigate to="/inicio"/>}
         />
     </Routes>
     </>

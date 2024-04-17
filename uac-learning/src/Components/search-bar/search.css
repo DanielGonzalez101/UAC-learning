@@ -1,24 +1,13 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f7f7f7;
-  }
   
   .search-container {
    
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 700px;
+      width: 50%;
       border-radius: 50px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       overflow: hidden; /* Oculta los elementos hijos que sobrepasan el borde redondeado */
-      margin-top: -180px; /* Mueve la barra de búsqueda 180px hacia arriba */
-      margin-left: -340px; /* Mueve la barra de búsqueda 340px hacia la izquierda */
       
     }
    
@@ -30,7 +19,7 @@ body {
     width: 100%;
   }
   
-  input {
+  .input-search {
     flex-grow: 1; /* Permite que el input crezca y llene el espacio */
     border: none;
     border-radius: 50px;

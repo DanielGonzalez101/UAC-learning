@@ -72,10 +72,7 @@ label {
   margin-bottom: 7px;
 }
 
-input[type="text"],
-input[type="email"],
-select,
-textarea {
+.input-edituser {
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -83,7 +80,7 @@ textarea {
   font-size: 14px;
 }
 
-button {
+.button-edituser {
   padding: 10px 20px;
   background-color: #007bff;
   color: #fff;
@@ -93,6 +90,11 @@ button {
   font-size: 14px;
 }
 
-button:hover {
+.button-edituser {
   background-color: #0056b3;
+}
+.img-edituser {
+  height: 50%;
+  margin: 10px;
+  width: 80%;
 }
