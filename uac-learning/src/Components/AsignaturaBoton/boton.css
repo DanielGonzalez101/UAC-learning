@@ -1,0 +1,39 @@
+.my-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem; /* Usar unidades relativas para el tamaño del texto */
+  min-width: 300px;
+  min-height: 250px;
+  max-width: 300px;
+  max-height: 250px;
+}
+
+.my-button-icon {
+  width: 195px; /* Unidades relativas para el tamaño del icono */
+  height: 167px; /* Unidades relativas para el tamaño del icono */
+  margin-bottom: 10px;
+}
+
+.my-button-text {
+  font-weight: bold;
+  font-size: x-large;
+  color: white;
+}
+
+.my-button {
+  /* Estilos previos de tu boton */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-button:hover {
+  /* Escala la tarjeta ligeramente para dar un efecto de "levantamiento" */
+  transform: scale(1.05);
+  /* Agrega una sombra para resaltar la tarjeta */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

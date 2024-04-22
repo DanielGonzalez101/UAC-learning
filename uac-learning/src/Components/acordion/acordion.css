@@ -1,5 +1,7 @@
-
-
+/* #accordion-item{
+    background-color: white;
+    width: fit-content;
+}
 .accordion-header {
     cursor: pointer;
 }
@@ -7,12 +9,46 @@
 .accordion-content {
     color: black;
 }
+
 .button {
     display: block;
     border-bottom: 1px solid #ccc;
     margin: 0px;
     cursor: pointer;
 }
+
 a {
     text-decoration: none;
+} */
+
+#contenedor-acordeon {
+  background-color: white;
+  max-width: 100%; /* Se asegura de no sobrepasar el ancho de su contenedor */
+  width: 100px; /* Anchura inicial, que puedes ajustar según lo que contenga */
+  border-radius: 25px;
+  margin: 0 auto; /* Esto centrará el div en su contenedor */
+  box-sizing: border-box; /* Asegura que el padding y border estén incluidos en el ancho */
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 1200px) {
+  #contenedor-acordeon {
+    margin-left: auto; /* Se mantiene centrado */
+    width: 80%; /* O un ancho que tenga sentido en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 768px) {
+  #contenedor-acordeon {
+    margin-left: auto;
+    width: 90%; /* O un ancho que tenga sentido en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #contenedor-acordeon {
+    margin-left: auto;
+    width: 95%; /* O un ancho que tenga sentido en pantallas más pequeñas */
+    border-radius: 15px; /* Ajustar el border-radius para pantallas pequeñas si es necesario */
+  }
 }
